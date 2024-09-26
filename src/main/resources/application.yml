@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    default: dev
+  application:
+    name: Tapuy
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/?user=root
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+---
+
+#Perfil dev
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 8080
+
+#Perfil prod
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+server:
+  port: 9000
