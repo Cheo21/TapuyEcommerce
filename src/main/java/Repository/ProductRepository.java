@@ -1,4 +1,4 @@
-package DAO;
+package Repository;
 
 
 import Entity.Product;
@@ -10,9 +10,9 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Integer> {
+public interface ProductRepository<T extends Product> extends JpaRepository<T, Integer> {
 
-    Page<Product> getProductsByTopic(String topic, Pageable pageable);
-    Page<Product> findAllByOrderByCreationDateAsc(Pageable pageable);
+    Page<T> getProductsByTopic(String topic, Pageable pageable);
+    Page<T> findAllByOrderByCreationDateAsc(Pageable pageable);
 
 }

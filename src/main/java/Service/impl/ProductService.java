@@ -1,46 +1,46 @@
 package Service.impl;
 
-import DAO.ProductRepository;
 import Entity.Product;
+import Repository.ProductManagement;
+import Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import Service.ProductManagement;
 
 @Service
-public class ProductService implements ProductManagement {
+public class ProductService<T extends Product> implements ProductManagement<T> {
 
     @Autowired
-    private ProductRepository productRepository;
+    private ProductRepository<T> productRepository;
 
     @Override
-    public void addProduct(Product product) {
+    public void addProduct(T product) {
         productRepository.save(product);
     }
 
     @Override
-    public void deleteProduct(Product product) {
+    public void deleteProduct(T product) {
         productRepository.delete(product);
     }
 
     @Override
-    public void updateProduct(Product product) {
+    public void updateProduct(T product) {
         productRepository.save(product);
     }
 
     @Override
-    public Product getProduct(int id) {
+    public T getProduct(int id) {
         return productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
     }
 
     @Override
-    public Page<Product> getProducts(Pageable pageable) {
+    public Page<T> getProducts(Pageable pageable) {
         return productRepository.findAll(pageable);
     }
 
     @Override
-    public Page<Product> getProductsByTopic(String topic, Pageable pageable) {
+    public Page<T> getProductsByTopic(String topic, Pageable pageable) {
        return productRepository.getProductsByTopic(topic, pageable);
 
     }
@@ -48,7 +48,7 @@ public class ProductService implements ProductManagement {
 
 
     @Override
-    public Page<Product> findAllByOrderByCreationDateAsc(Pageable pageable) {
+    public Page<T> findAllByOrderByCreationDateAsc(Pageable pageable) {
         return productRepository.findAllByOrderByCreationDateAsc(pageable);
     }
 
