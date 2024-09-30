@@ -4,14 +4,14 @@ import Entity.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-public interface ProductManagement {
+public interface ProductManagement<T extends Product> {
 
-    void addProduct(Product product);
-    void deleteProduct(Product product);
-    void updateProduct(Product product);
-    Product getProduct(int id);
-    Page<Product> getProducts(Pageable pageable);
-    Page<Product> getProductsByTopic(String topic, Pageable pageable);
-    Page<Product> findAllByOrderByCreationDateAsc(Pageable pageable);
+    void addProduct(T product);
+    void deleteProduct(T product);
+    void updateProduct(T product);
+    T getProduct(int id);
+    Page<T> getProducts(Pageable pageable);
+    Page<T> getProductsByTopic(String topic, Pageable pageable);
+    Page<T> findAllByOrderByCreationDateAsc(Pageable pageable);
 
 }
