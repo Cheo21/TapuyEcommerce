@@ -2,27 +2,28 @@ package Entity;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "product_type") // Añadir columna discriminadora
-@Table(name = "User")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class  User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "email")
+
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
+    @Size(min = 6)
     private String password;
 
-    @Column(name = "fristName")
+    @Column(name = "firstName", nullable = false)
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "lastName", nullable = false)
     private String lastName;
 
 
