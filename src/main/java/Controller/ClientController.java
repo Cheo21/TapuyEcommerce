@@ -16,10 +16,10 @@ import util.UserMapper;
 
 @RestController
 @RequestMapping("/api/user")
-public class UserController {
+public class ClientController {
 
     @Autowired
-    private UserService userService;
+    private UserService<Client> userService;
 
 
 

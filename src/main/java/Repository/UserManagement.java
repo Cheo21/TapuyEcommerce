@@ -2,11 +2,11 @@ package Repository;
 
 import Entity.User;
 
-public interface UserManagement {
+public interface UserManagement<T> {
 
-    void createUser(User user);
+    void createUser(T user);
     User readUser(Long id);
-    void updateUser(User user);
+    void updateUser(T user);
     void deleteUser(Long id);
 
 }
