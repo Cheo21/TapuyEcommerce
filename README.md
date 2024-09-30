@@ -5,6 +5,32 @@ Ecommerce Tapuy - Java Project
 
 # Casos de Uso para la Aplicación de Ecommerce de Tote Bags y futuros productos
 
+## Listado de casos de uso:
+1. [Registro de Usuario](#1-registro-de-usuario)
+2. [Inicio de Sesión](#2-inicio-de-sesión)
+3. [Navegación por Productos](#3-navegación-por-productos)
+4. [Ver Detalles del Producto](#4-ver-detalles-del-producto)
+5. [Agregar al Carrito de Compras](#5-agregar-al-carrito-de-compras)
+6. [Ver Carrito de Compras](#6-ver-carrito-de-compras)
+7. [Proceso de Pago](#7-proceso-de-pago)
+8. [Gestión de Pedidos](#8-gestión-de-pedidos)
+9. [Gestión de Opiniones y Reseñas](#9-gestión-de-opiniones-y-reseñas)
+10. [Recuperación de Contraseña](#10-recuperación-de-contraseña)
+
+---
+
+## Casos de Uso de Administración
+
+11. [Agregar Producto](#11-agregar-producto)
+12. [Editar Producto](#12-editar-producto)
+13. [Eliminar Producto](#13-eliminar-producto)
+14. [Ver Lista de Productos](#14-ver-lista-de-productos)
+15. [Agregar Usuario](#15-agregar-usuario)
+16. [Editar Usuario](#16-editar-usuario)
+17. [Eliminar Usuario](#17-eliminar-usuario)
+18. [Ver Lista de Usuarios](#18-ver-lista-de-usuarios)
+
+
 ## 1. Registro de Usuario
 - **Actor:** Usuario
 - **Descripción:** Permitir a los nuevos usuarios crear una cuenta en la aplicación.
