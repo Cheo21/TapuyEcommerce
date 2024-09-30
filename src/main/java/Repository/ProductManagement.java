@@ -1,17 +1,16 @@
-package DAO;
-
+package Repository;
 
 import Entity.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
+public interface ProductManagement<T extends Product> {
 
-
-@Repository
-public interface ProductRepository<T extends Product> extends JpaRepository<T, Integer> {
-
+    void addProduct(T product);
+    void deleteProduct(T product);
+    void updateProduct(T product);
+    T getProduct(int id);
+    Page<T> getProducts(Pageable pageable);
     Page<T> getProductsByTopic(String topic, Pageable pageable);
     Page<T> findAllByOrderByCreationDateAsc(Pageable pageable);
 

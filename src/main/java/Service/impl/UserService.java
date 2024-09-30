@@ -1,6 +1,6 @@
 package Service.impl;
-import DAO.UserRepository;
-import Service.UserManagement;
+import Repository.UserRepository;
+import Repository.UserManagement;
 import Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

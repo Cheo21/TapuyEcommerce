@@ -1,12 +1,12 @@
 package Service.impl;
 
-import DAO.ProductRepository;
 import Entity.Product;
+import Repository.ProductManagement;
+import Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import Service.ProductManagement;
 
 @Service
 public class ProductService<T extends Product> implements ProductManagement<T> {
