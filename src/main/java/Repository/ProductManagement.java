@@ -1,4 +1,4 @@
-package Service;
+package Repository;
 
 import Entity.Product;
 import org.springframework.data.domain.Page;

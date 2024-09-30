@@ -1,4 +1,4 @@
-package Service;
+package util;
 
 
 public interface Mapper<E, D> {

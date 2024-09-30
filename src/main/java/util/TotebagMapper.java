@@ -1,8 +1,7 @@
-package Service.impl;
+package util;
 
 import DTO.TotebagDTO;
 import Entity.Totebag;
-import Service.Mapper;
 
 public class TotebagMapper implements Mapper<Totebag, TotebagDTO> {
 
