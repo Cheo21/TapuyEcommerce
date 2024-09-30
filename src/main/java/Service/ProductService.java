@@ -1,4 +1,4 @@
-package Service.impl;
+package Service;
 
 import Entity.Product;
 import Repository.ProductManagement;

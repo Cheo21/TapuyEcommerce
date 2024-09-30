@@ -1,7 +1,7 @@
 package Entity;
 
-import Service.impl.ProductService;
-import Service.impl.UserService;
+import Service.ProductService;
+import Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

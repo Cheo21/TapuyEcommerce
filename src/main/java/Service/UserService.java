@@ -1,4 +1,4 @@
-package Service.impl;
+package Service;
 import Repository.UserRepository;
 import Repository.UserManagement;
 import Entity.User;
