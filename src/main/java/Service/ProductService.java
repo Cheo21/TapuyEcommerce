@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ProductService<T extends Product> implements ProductManagement<T> {
 
@@ -30,8 +32,8 @@ public class ProductService<T extends Product> implements ProductManagement<T> {
     }
 
     @Override
-    public T getProduct(int id) {
-        return productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
+    public Optional<T> getProduct(int id) {
+        return productRepository.findById(id);
     }
 
     @Override
