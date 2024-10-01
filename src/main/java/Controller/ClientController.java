@@ -23,7 +23,7 @@ public class ClientController {
 
 
 
-    @PostMapping
+    @PostMapping(value = "register")
     public ResponseEntity<String> registerClient(@Valid @RequestBody ClientRegistrationDTO userRegistrationDTO) {
         try {
            Client client = UserMapper.clientRegistrationDTOToEntity(userRegistrationDTO);
