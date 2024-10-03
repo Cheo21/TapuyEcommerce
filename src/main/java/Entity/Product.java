@@ -6,8 +6,7 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "product_type") // Añadir columna discriminadora
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name = "products")
 public abstract class Product {
     @Id
